@@ -47,18 +47,18 @@ class DashboardController extends Controller
         //     dd($sp_quantity);
         // }
         // Best product that sale
-        $topsales = DB::table('product_sale')
-            ->leftJoin('products', 'products.id', '=', 'product_sale.product_id')
-            ->select(
-                'products.id',
-                'products.product_name',
-                'product_sale.product_id',
-                DB::raw('SUM(product_sale.quantity) as total')
-            )
-            ->groupBy('products.id', 'product_sale.product_id', 'products.product_name')
-            ->orderBy('total', 'desc')
-            ->limit(6)
-            ->get();
+        // $topsales = DB::table('product_sale')
+        //     ->leftJoin('products', 'products.id', '=', 'product_sale.product_id')
+        //     ->select(
+        //         'products.id',
+        //         'products.product_name',
+        //         'product_sale.product_id',
+        //         DB::raw('SUM(product_sale.quantity) as total')
+        //     )
+        //     ->groupBy('products.id', 'product_sale.product_id', 'products.product_name')
+        //     ->orderBy('total', 'desc')
+        //     ->limit(6)
+        //     ->get();
 
         // Best product that purchase
         $toppurchases = DB::table('product_purchase')
@@ -113,7 +113,7 @@ class DashboardController extends Controller
                 'categories',
                 'products',
                 'sumprofit',
-                'topsales',
+                //'topsales',
                 'toppurchases',
                 'stock_alerts',
                 'sales',
