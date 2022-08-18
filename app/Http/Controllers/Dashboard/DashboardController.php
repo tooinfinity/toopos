@@ -112,15 +112,15 @@ class DashboardController extends Controller
                 'moderator',
                 'categories',
                 'products',
-                'sumprofit',
+                //'sumprofit',
                 //'topsales',
-                'toppurchases',
+                //'toppurchases',
                 'stock_alerts',
                 'sales',
-                'sales_today',
+                //'sales_today',
                 'purchases',
-                'purchases_today',
-                'totalspendmoneys'
+                //'purchases_today',
+                //'totalspendmoneys'
             )
         );
     }
