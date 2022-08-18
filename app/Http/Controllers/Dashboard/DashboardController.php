@@ -103,7 +103,7 @@ class DashboardController extends Controller
 
         //dd($sumprofit);
         // Product with min stock
-        $stock_alerts = DB::table('products')->where('stock', '<=', 'min_stock')->paginate(3, ['*'], 'stockalert');
+        // $stock_alerts = DB::table('products')->where('stock', '<=', 'min_stock')->paginate(3, ['*'], 'stockalert');
 
         //dd($stock_alerts);
         return view(
@@ -115,7 +115,7 @@ class DashboardController extends Controller
                 //'sumprofit',
                 //'topsales',
                 //'toppurchases',
-                'stock_alerts',
+                //'stock_alerts',
                 'sales',
                 //'sales_today',
                 'purchases',
